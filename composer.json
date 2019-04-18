@@ -1,0 +1,13 @@
+{
+    "name": "wilder/untitled",
+    "authors": [
+        {
+            "name": "antoinich",
+            "email": "antoinejen@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "psr/log": "^1.1"
+    }
+}
