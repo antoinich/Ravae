@@ -47,13 +47,8 @@ $b=json_decode($resulta->getBody());
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <select class="custom-select custom-select-lg mb-3">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="level3/roomA.php" > Tu va voir <?php echo $c->name?></a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="level3/roomB.php" >Tu va voir <?php echo $d->name?></a></button>
         </div>
     </div>
-    <button type="button" class="btn btn-outline-success mt-3 offset-5" style="width: 14em">Valider</button>
 </div>
