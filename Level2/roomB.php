@@ -1,4 +1,7 @@
 <?php
+
+use GuzzleHttp\Client;
+
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
 
@@ -36,13 +39,13 @@ $b=json_decode($resulta->getBody());
 <div id="bottom">
     <div class="card mt-2 text-center offset-5" style="width: 14em">
         <div class="card-body">
-           <p><?php echo $d->name ?>te parle</p>
+            <p> <?php echo $d->name ?> est devant le contoire de la pharmacie </p>
 
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p> je t'ai vue hier avec <?php echo $c->name?> et <?php echo $b->name ?> t'était bien déchirer tu pourrais aller les voir  </p>
+            <p>En achetant t'est doliprane tu vois <?php echo $c->name ?> courir tous nu  </p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">

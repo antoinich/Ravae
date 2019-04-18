@@ -36,13 +36,8 @@ $b=json_decode($resulta->getBody());
 <div id="bottom">
     <div class="card mt-2 text-center offset-5" style="width: 14em">
         <div class="card-body">
-           <p><?php echo $d->name ?>te parle</p>
+            <h1> Tu a encore trop ABUSER !</h1>
 
-        </div>
-    </div>
-    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
-        <div class="card-body">
-            <p> je t'ai vue hier avec <?php echo $c->name?> et <?php echo $b->name ?> t'était bien déchirer tu pourrais aller les voir  </p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
