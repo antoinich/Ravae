@@ -2,14 +2,18 @@
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
 
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
+$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c34");
 $d=json_decode($res->getBody());
 
-$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$c=json_decode($result->getBody());
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c65");
+$h=json_decode($result->getBody());
+
+$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c68");
+$g=json_decode($resulta->getBody());
 
 $resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$b=json_decode($resulta->getBody());
+$r=json_decode($resulta->getBody());
+?>
 ?>
 
 <!doctype html>
@@ -54,13 +58,13 @@ $b=json_decode($resulta->getBody());
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p> je t'ai vue hier avec <?php echo $c->name?> et <?php echo $b->name ?> t'était bien déchirer tu pourrais aller les voir  </p>
+            <p> je t'ai vue hier avec <?php echo $h->name?> et <?php echo $g->name ?> t'était bien déchirer tu pourrais aller les voir  </p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level3/Room3A.php" > Tu va voir <?php echo $c->name?></a></button>
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level3/Room3B.php" >Tu va voir <?php echo $d->name?></a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level3/Room3A.php" > Tu va voir <?php echo $h->name?></a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level3/Room3B.php" >Tu va voir <?php echo $g->name?></a></button>
         </div>
     </div>
 </div>

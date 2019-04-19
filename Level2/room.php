@@ -4,9 +4,9 @@ use GuzzleHttp\Client;
 
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
+$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c34");
 $d=json_decode($res->getBody());
-$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c37");
 $c=json_decode($result->getBody());
 ?>
 

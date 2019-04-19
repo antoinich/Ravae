@@ -4,6 +4,8 @@ require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
 $res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
 $d=json_decode($res->getBody());
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c65");
+$h=json_decode($result->getBody());
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,11 +31,11 @@ $d=json_decode($res->getBody());
     <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="<?= $d->image ?>" class="card-img" alt="...">
+                <img src="<?= $h->image ?>" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $d->name ?></h5>
+                    <h5 class="card-title"><?= $h->name ?></h5>
                 </div>
             </div>
         </div>
@@ -48,7 +50,7 @@ $d=json_decode($res->getBody());
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p><?php echo $d->name ?>: Hello, Je ne sais pas ou sont les oeufs de paque mais je connais un grand sage
+            <p><?php echo $h->name ?>: Hello, Je ne sais pas ou sont les oeufs de paque mais je connais un grand sage
             je peut t'emener le voir si tu veux ?</p>
         </div>
     </div>

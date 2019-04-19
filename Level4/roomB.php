@@ -5,14 +5,13 @@ use GuzzleHttp\Client;
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
 
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$d=json_decode($res->getBody());
 
-$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$c=json_decode($result->getBody());
 
-$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$b=json_decode($resulta->getBody());
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c5d");
+$s=json_decode($result->getBody());
+
+$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c3d");
+$x=json_decode($resulta->getBody());
 ?>
 
 <!doctype html>
@@ -40,18 +39,18 @@ $b=json_decode($resulta->getBody());
 <div id="bottom">
     <div class="card mt-2 text-center offset-5" style="width: 14em">
         <div class="card-body">
-            <p> <?php echo $d->name ?> te parles </p>
+            <p> <?php echo $s->name ?> te parles </p>
 
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p><?php echo $d->name ?> Hier j'étais trop bourrer j'ai empreinter les oeufs du lapins de pacques, mais je me les suis fait voler par <?php echo $c->name ?> </p>
+            <p><?php echo $s->name ?> : Hier j'étais trop bourrer j'ai empreinter les oeufs du lapins de pacques, mais je me les suis fait voler par <?php echo $x->name ?> </p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level5/room.php">Essaye de trouvez <?= $c->name ?></a> </button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level5/room.php">Essaye de trouvez <?= $x->name ?></a> </button>
         </div>
     </div>
 </div>

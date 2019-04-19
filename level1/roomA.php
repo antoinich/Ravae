@@ -1,8 +1,11 @@
 <?php
+
+use GuzzleHttp\Client;
+
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/eggs");
-$d=json_decode($res->getBody());
+$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c32");
+$n=json_decode($res->getBody());
 ?>
 
 <!doctype html>

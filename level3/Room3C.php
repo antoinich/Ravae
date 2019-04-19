@@ -1,7 +1,7 @@
 <?php
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
+$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c38");
 $d=json_decode($res->getBody());
 ?>
 
@@ -53,7 +53,7 @@ $d=json_decode($res->getBody());
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomB.php">Suivre Superman</a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomB.php">suivre <?php echo $d->name ?> </a></button>
         </div>
     </div>
 </div>

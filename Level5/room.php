@@ -5,14 +5,8 @@ use GuzzleHttp\Client;
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
 
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$d=json_decode($res->getBody());
-
-$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$c=json_decode($result->getBody());
-
-$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$b=json_decode($resulta->getBody());
+$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c3d");
+$x=json_decode($resulta->getBody());
 ?>
 
 <!doctype html>
@@ -39,7 +33,7 @@ $b=json_decode($resulta->getBody());
 <div id="bottom">
     <div class="card mt-2 text-center offset-5" style="width: 14em">
         <div class="card-body">
-            <p> <?php echo $d->name?> le voleur d'oeufs</p>
+            <p> <?php echo $x->name?> le voleur d'oeufs</p>
         </div>
     </div>
 
