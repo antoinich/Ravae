@@ -16,6 +16,7 @@ $d=json_decode($res->getBody());
 </header>
 <body>
 <h1></h1>
+
 <div class="container">
     <div class="row">
         <form method="POST" action="../start/StartStory.php">
