@@ -19,22 +19,34 @@ $c=json_decode($result->getBody());
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="template_page.css" type="text/css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="room.css" type="text/css" media="screen" />
 
     <title>Level 2</title>
 </head>
-
-<body>
+<iframe src="../../Audio/8-bit-Music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
 <div id="top">
-
+    <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="<?= $d->image ?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $d->name ?></h5>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <hr/>
 <div id="bottom">
     <div class="card mt-2 text-center offset-5" style="width: 14em">
         <div class="card-body">
-            Arriver a la pharmacie
+            La pharmacie
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">

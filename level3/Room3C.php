@@ -15,7 +15,7 @@ $d=json_decode($res->getBody());
 
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" href="Room3Ccss" type="text/css" media="screen" />
+    <link rel="stylesheet" href="Room3C.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -48,12 +48,12 @@ $d=json_decode($res->getBody());
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            Tu voit Superman traversé la rue a poil !
+            Tu interpelle <?php echo $d->name ?> a poile il te dit qu'il ce souvient de t'avoir vue avec une personnes hier.
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="#">Suivre Superman</a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomB.php">Suivre Superman</a></button>
         </div>
     </div>
 </div>
