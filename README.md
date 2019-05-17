@@ -8,3 +8,11 @@ The project is coded in full HTML/CSS and PHP.
 We will try to improve the narration and the gameplay asap with:
 -more paths to discover the adventure
 -Adding action (combat/objects using and collecting)
+
+Created and developped by (in alphabetical order):
+
+Antoine Jen
+Romain Legal
+Vincent Mallard
+Arthur Pralon
+Edouard Provost
