@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Press Start 2P';
+
+}
+
+body{
+    font-family: 'Press Start 2P' !important;
+    background-color: black;
+    color: white;
+    text-decoration: none !important;
+    height:100%;
+}
+a{
+    color:white;
+}
+#top,
+#bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 50%;
+}
+
+#top {
+    top: 0;
+    background-color:#fff;
+    background-image: url("http://1.bp.blogspot.com/-ueIclZ9JZvc/U7G7pMGhZbI/AAAAAAAAAmQ/yu05p8cdrP4/s1600/ob_7b21bfb0fc4a2c5d119fa3cde01d753a_garourockbg.gif");
+    background-size: 100% 115%;
+    background-repeat: no-repeat;
+}
+
+#bottom {
+    bottom: 0;
+    background-color: black;
+}
+
+.card-img {
+    height: 8em;
+}
+
+.card-text {
+    height: 8em;
+}
+#enemy-card {
+    display:block;
+
+    left: 70vw;
+    height: 8em;
+}
+#enemy-card {
+    animation-duration: 1s;
+    animation-name: glissement;
+    animation-iteration-count: 1s;
+
+}
+
+#enemy-card {
+    animation-direction: normal;
+}https://github.com/FrancoisDoussin
+
+@keyframes glissement {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+}
+.harley{
+     color: black;
+ }

@@ -1,0 +1,72 @@
+
+
+
+@font-face {
+    font-family: 'Press Start 2P';
+
+}
+
+body{
+    font-family: 'Press Start 2P' !important;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    height:100%;
+}
+
+#top,
+#bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 50%;
+}
+
+#top {
+    top: 0;
+    background-color:#fff;
+    background-image: url("http://imgs.abduzeedo.com/files/articles/wicked-fighting-game-background-gifs/E4nU7qja.gif");
+    background-size: 100% 115%;
+    background-repeat: no-repeat;
+}
+
+#bottom {
+    bottom: 0;
+    background-color: black;
+}
+
+.card-img {
+    height: 8em;
+}
+
+.card-text {
+    height: 8em;
+}
+#enemy-card {
+    display:block;
+
+    left: 70vw;
+    height: 8em;
+}
+#enemy-card {
+    animation-duration: 1s;
+    animation-name: glissement;
+    animation-iteration-count: 1s;
+
+}
+
+#enemy-card {
+    animation-direction: normal;
+}
+
+@keyframes glissement {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
