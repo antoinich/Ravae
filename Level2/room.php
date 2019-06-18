@@ -37,6 +37,7 @@ $c=json_decode($result->getBody());
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $d->name ?></h5>
+                Je suis ton pere!!!!!!
                 </div>
             </div>
         </div>
@@ -44,20 +45,15 @@ $c=json_decode($result->getBody());
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
-        <div class="card-body">
-            La pharmacie
-        </div>
-    </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p>Tu vois <?php echo $d->name ?> qui te fait des grand signes de la main,<?php echo $c->name ?> qui tien la pharmacie et qui te propose de la codéine ou des doliprane. </p>
+            <p>Tu vois <?php echo $d->name ?> qui te fait des grand signes de la main, dans la pharmacie la vendeuse <?php echo $c->name ?> te propose de la codéine ou des doliprane. </p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
             <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="roomA.php" ><?php echo $d->name?></a></button>
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="roomB.php" >Tu prend un doliprane</a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="/Level2/roomB.php" >Tu prend un doliprane</a></button>
             <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="roomC.php" >Tu prend de la codéine</a></button>
         </div>
     </div>

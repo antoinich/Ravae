@@ -23,7 +23,7 @@ $d=json_decode($res->getBody());
 </head>
 
 <body>
-<iframe src="../../Audio/16-bit-music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+<iframe src="../../Audio/8-bit-boss-battle.mp3" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe>
 <div id="top">
     <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
@@ -34,6 +34,7 @@ $d=json_decode($res->getBody());
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $d->name ?></h5>
+                    arrête de fixer ma B*** !
                 </div>
             </div>
         </div>
@@ -41,14 +42,9 @@ $d=json_decode($res->getBody());
 </div>
 <hr />
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
-        <div class="card-body">
-            Lieu
-        </div>
-    </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            Tu interpelle <?php echo $d->name ?> a poile il te dit qu'il ce souvient de t'avoir vue avec une personnes hier.
+            Tu ratrappes <?php echo $d->name ?> il te dit qu'il se souvient de t'avoir vu avec une personne hier.
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">

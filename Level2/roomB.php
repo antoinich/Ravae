@@ -8,8 +8,7 @@ $client = new GuzzleHttp\Client();
 $res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c37");
 $j=json_decode($res->getBody());
 
-$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c38
-");
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c38");
 $c=json_decode($result->getBody());
 
 $resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c34");
@@ -45,6 +44,7 @@ $d=json_decode($resulta->getBody());
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $j->name ?></h5>
+                    Tu as une sale tête
                 </div>
             </div>
         </div>
@@ -52,21 +52,15 @@ $d=json_decode($resulta->getBody());
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
+    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p> <?php echo $j->name ?> est devant le contoire de la pharmacie </p>
+            <p>En achetant tes dolipranes tu vois <?php echo $c->name ?> courrir tous nu  et <?php echo $d->name ?> te fait toujours des signes</p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p>En achetant t'est doliprane tu vois <?php echo $c->name ?> courir tous nu  et <?php echo $d->name ?> te fair toujour de signe</p>
-        </div>
-    </div>
-    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
-        <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level3/Room3A.php" > Tu va voir <?php echo $d->name?></a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level2/roomA.php" > Tu va voir <?php echo $d->name?></a></button>
             <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level3/Room3C.php" > Tu cours après <?php echo $c->name?></a></button>
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em">C</button>
         </div>
     </div>
 </div>

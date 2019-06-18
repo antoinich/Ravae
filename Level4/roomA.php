@@ -32,6 +32,8 @@ $b=json_decode($resulta->getBody());
 </head>
 
 <body>
+<iframe src="../../Audio/fatal-fury.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
 <div id="top">
 
 </div>

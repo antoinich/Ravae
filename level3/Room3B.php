@@ -1,9 +1,23 @@
 <?php
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
+
+$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c34");
 $d=json_decode($res->getBody());
-?>
+
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c65");
+$h=json_decode($result->getBody());
+
+$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c68");
+$g=json_decode($resulta->getBody());
+
+$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
+$r=json_decode($resulta->getBody());
+
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c5d");
+$s=json_decode($result->getBody());
+
+use GuzzleHttp\Client; ?>
 <!doctype html>
 <html lang="en">
 
@@ -28,11 +42,12 @@ $d=json_decode($res->getBody());
     <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="<?= $d->image ?>" class="card-img" alt="...">
+                <img src="<?= $g->image ?>" class="card-img" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $d->name ?></h5>
+                    <h5 class="card-title"><?= $g->name ?></h5>
+                    Vous ne passerez pas !!!
                 </div>
             </div>
         </div>
@@ -40,19 +55,14 @@ $d=json_decode($res->getBody());
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
+    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            Salle 3B
+            <p><?= $g->name ?>: Je t'ai vu hier, c'était pas beau a voir. Tu cherches les oeufs ? Je sais où tu pourras les trouver <?php echo $s->name ?> il l'est avait avec lui hier soir tu te souvient pas ?</p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p><?= $d->name ?>: Je t'ai vue hier, c'était pas beau a voir. Tu cherche les oeufs ? Je sais ou tu pourra les trouvez ?? les avait avec lui hier soir tu te souvient pas ?</p>
-        </div>
-    </div>
-    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
-        <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomB.php">Allez voir ??</a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomB.php">Allez voir <?php echo $s->name?></a></button>
         </div>
     </div>
 </div>

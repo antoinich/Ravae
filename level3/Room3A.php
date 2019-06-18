@@ -17,15 +17,15 @@ $h=json_decode($result->getBody());
 
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" href="Room3A.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Room3A.css" type="text/css" media="screen" />
 
     <title>Salle 3A</title>
 </head>
 
 <body>
-<iframe src="../../Audio/8-bit-Music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+<iframe src="../../Audio/8-bit-boss-battle.mp3" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe>
 <div id="top">
     <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
@@ -36,6 +36,7 @@ $h=json_decode($result->getBody());
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $h->name ?></h5>
+                    <p class="harley">Salut beau gosse!</p>
                 </div>
             </div>
         </div>
@@ -43,20 +44,16 @@ $h=json_decode($result->getBody());
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
+
+
+    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            Salle 3A
+            <p><?php echo $h->name ?>: Je t'ai vu discuter avec le lapin de paques hier, pour les oeufs ça ne me dit rien...<br>Mais il y a ce <a href="https://github.com/FrancoisDoussin">type louche</a> au bar qui n'arrettait pas de te regarder...Je connais un grand savant il pourra peut etre t'aider!</p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p><?php echo $h->name ?>: Hello, Je ne sais pas ou sont les oeufs de paque mais je connais un grand sage
-            je peut t'emener le voir si tu veux ?</p>
-        </div>
-    </div>
-    <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
-        <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomC.php">Allez voir le grand sage</a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../Level4/roomC.php">Allez voir le savant</a></button>
         </div>
     </div>
 </div>

@@ -27,26 +27,35 @@ $x=json_decode($resulta->getBody());
 </head>
 
 <body>
+<iframe src="../../Audio/mortal-kombat-theme.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
 <div id="top">
+    <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="<?= $x->image ?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $x->name ?></h5>
+                    ces oeufs sont à moi !!!!
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
-        <div class="card-body">
-            <p> <?php echo $x->name?> le voleur d'oeufs</p>
-        </div>
-    </div>
-
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p> Devant le voleur d'oeufs,le stresse monte</p>
+            <p> Face à toi Hellboy qui tient les oeufs. Il faut agir !</p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="" >Tu te pisse dessus</a></button>
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="finalroom.php" >Tu va lui défoncer sa gueule</button>
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="/Level2/room.php" >J'ai encore mal a la tete je retourn a la pharmacie</button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../public/index.php" >Tu t'enfuis aussi vite que tu le peux</a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="finalroom.php" >Tu va lui mettre sur la tronche</button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="/Level2/room.php" >J'ai encore mal à la tête je retourne à la pharmacie</button>
         </div>
     </div>
 </div>

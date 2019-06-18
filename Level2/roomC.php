@@ -30,6 +30,8 @@ $b=json_decode($resulta->getBody());
 </head>
 
 <body>
+<iframe src="../../Audio/8-bit-Music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
 <div id="top">
 
 </div>
@@ -37,12 +39,12 @@ $b=json_decode($resulta->getBody());
 <div id="bottom">
     <div class="card mt-2 text-center offset-5" style="width: 14em">
         <div class="card-body">
-            <h1> Tu a encore trop ABUSER !</h1>
+            <h1> OVERDOSE</h1>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../level1/roomA.php"> restart </a></button>
+            <button type="button" class="btn btn-outline-success mt-3 offset-4" style="width: 18em"><a href="../public/index.php"> restart </a></button>
         </div>
     </div>
 </div>

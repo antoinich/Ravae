@@ -4,15 +4,9 @@ use GuzzleHttp\Client;
 
 require_once '../vendor/autoload.php';
 $client = new GuzzleHttp\Client();
+$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/5cac51240d488f0da6151c32");
+$d=json_decode($result->getBody());
 
-$res = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$d=json_decode($res->getBody());
-
-$result = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$c=json_decode($result->getBody());
-
-$resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
-$b=json_decode($resulta->getBody());
 ?>
 
 <!doctype html>
@@ -33,19 +27,30 @@ $b=json_decode($resulta->getBody());
 </head>
 
 <body>
+<iframe src="../../Audio/mortal-kombat-theme.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
 <div id="top">
+    <div class="card mb-3 mt-2" id="enemy-card" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="<?= $d->image ?>" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $d->name ?></h5>
+                    tu as réussi !! tu as vaincu le voleur !
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
-        <div class="card-body">
-            <p> Après le combats</p>
-        </div>
-    </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p> Le voleur d'oeuf c'est fait éclater par ta rages, tu a win </p>
+            <p>
+                Tu t'approches de Hellboy et ce dernier tombe raide mort !! Son diabète de type C a finalement eu raison de lui, faut pas abuser des oeufs de pâques ! Félicitation  ! </p>
         </div>
     </div>
 </div>

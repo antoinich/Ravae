@@ -22,7 +22,7 @@ body{
 #top {
     top: 0;
     background-color:#fff;
-    background-image: url("https://media.giphy.com/media/4CSKMWwI1Q8Ni/giphy.gif");
+    background-image: url("https://media.giphy.com/media/l28DPtVhW1iiA/giphy.gif");
     background-size: 100% 115%;
     background-repeat: no-repeat;
 }
@@ -30,4 +30,40 @@ body{
 #bottom {
     bottom: 0;
     background-color: black;
+}
+
+.card-img {
+    height: 8em;
+}
+
+.card-text {
+    height: 8em;
+}
+#enemy-card {
+    display:block;
+
+    left: 70vw;
+    height: 8em;
+}
+#enemy-card {
+    animation-duration: 1s;
+    animation-name: glissement;
+    animation-iteration-count: 1s;
+
+}
+
+#enemy-card {
+    animation-direction: normal;
+}
+
+@keyframes glissement {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }

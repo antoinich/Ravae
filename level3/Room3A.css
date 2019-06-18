@@ -7,10 +7,12 @@ body{
     font-family: 'Press Start 2P' !important;
     background-color: black;
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
     height:100%;
 }
-
+a{
+    color:white;
+}
 #top,
 #bottom {
     position: fixed;
@@ -22,7 +24,7 @@ body{
 #top {
     top: 0;
     background-color:#fff;
-    background-image: url("https://media.giphy.com/media/xV33dGcCEahOM/giphy.gif");
+    background-image: url("http://1.bp.blogspot.com/-ueIclZ9JZvc/U7G7pMGhZbI/AAAAAAAAAmQ/yu05p8cdrP4/s1600/ob_7b21bfb0fc4a2c5d119fa3cde01d753a_garourockbg.gif");
     background-size: 100% 115%;
     background-repeat: no-repeat;
 }
@@ -54,7 +56,7 @@ body{
 
 #enemy-card {
     animation-direction: normal;
-}
+}https://github.com/FrancoisDoussin
 
 @keyframes glissement {
     from {
@@ -66,4 +68,8 @@ body{
         margin-left: 0%;
         width: 100%;
     }
+
 }
+.harley{
+     color: black;
+ }

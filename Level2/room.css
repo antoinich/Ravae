@@ -15,7 +15,7 @@ body{
     position: fixed;
     left: 0;
     right: 0;
-    height: 35%;
+    height: 55%;
 }
 
 #top {
@@ -24,6 +24,7 @@ body{
     background-image: url("https://media.giphy.com/media/xV33dGcCEahOM/giphy.gif");
     background-size: 100% 115%;
     background-repeat: no-repeat;
+    height: 40vh;
 }
 
 #bottom {

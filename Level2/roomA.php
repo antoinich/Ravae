@@ -14,7 +14,6 @@ $g=json_decode($resulta->getBody());
 $resulta = $client->request('GET', "http://easteregg.wildcodeschool.fr/api/characters/random");
 $r=json_decode($resulta->getBody());
 ?>
-?>
 
 <!doctype html>
 <html lang="en">
@@ -40,10 +39,12 @@ $r=json_decode($resulta->getBody());
         <div class="row no-gutters">
             <div class="col-md-4">
                 <img src="<?= $d->image ?>" class="card-img" alt="...">
+
             </div>
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><?= $d->name ?></h5>
+                    Tu as bu le coté obscur hier!!!!
                 </div>
             </div>
         </div>
@@ -51,14 +52,10 @@ $r=json_decode($resulta->getBody());
 </div>
 <hr/>
 <div id="bottom">
-    <div class="card mt-2 text-center offset-5" style="width: 14em">
-        <div class="card-body">
-            <p><?php echo $d->name ?>te parle</p>
-        </div>
-    </div>
+
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
         <div class="card-body">
-            <p> je t'ai vue hier avec <?php echo $h->name?> et <?php echo $g->name ?> t'était bien déchirer tu pourrais aller les voir  </p>
+            <p> Les oeufs?...ça ne me dit rien...mais je t'ai vue hier avec <?php echo $h->name?> et <?php echo $g->name ?> tu étais bien déchiré, tu pourrais aller les voir  </p>
         </div>
     </div>
     <div class="card bg-dark text-white border 1px mt-4 offset-2" style="width: 60em">
